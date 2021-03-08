@@ -1,0 +1,28 @@
+<h2>Products</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+    <p *ngIf="product.description;else other_content">
+      Description: {{ product.description }}
+    </p>
+    <ng-template #other_content>
+      <p></p>
+    </ng-template>
+    <div><button (click)="share()">
+      Share
+    </button>
+    <button (click)="freak()">
+      Freak Out
+    </button></div>
+  </h3>
+</div>
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
