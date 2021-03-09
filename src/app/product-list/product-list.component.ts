@@ -14,9 +14,7 @@ export class ProductListComponent {
     window.alert("The product has been shared!");
   }
 
-  freak() {
-    window.alert("WHAT MAN!!!");
-  }
+   
 }
 
 /*
