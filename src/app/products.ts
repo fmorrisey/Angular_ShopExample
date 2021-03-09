@@ -16,6 +16,12 @@ export const products = [
     name: 'Phone Standard',
     price: 299,
     description: ''
+  },
+  {
+    id: 4,
+    name: 'Phone Air',
+    price: 450,
+    description: 'The same phone but lighter and with less features, but costs more than the others.'
   }
 ];
 

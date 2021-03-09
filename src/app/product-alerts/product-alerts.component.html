@@ -1,5 +1,6 @@
 <button
 id="left-button"
+(click)="notify.emit()"
 *ngIf="product.price > 700">
 Notify Me
 </button>
