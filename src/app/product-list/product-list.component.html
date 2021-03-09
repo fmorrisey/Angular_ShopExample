@@ -6,15 +6,17 @@
       {{ product.name }}
     </a>
     <p *ngIf="product.description;else other_content">
+      Price: ${{ product.price }}<br />
       Description: {{ product.description }}
     </p>
     <ng-template #other_content>
-      <p></p>
+      <p>Price: ${{ product.price }}</p>
     </ng-template>
     <div><button (click)="share()">
       Share
     </button>
-
+      <app-product-alerts [product]="product">
+      </app-product-alerts>
     </div>
   </h3>
 </div>
