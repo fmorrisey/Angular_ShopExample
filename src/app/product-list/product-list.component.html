@@ -2,23 +2,20 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details'"
-      [routerLink]="['/products', product.id]">
+    <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
       {{ product.name }}
     </a>
     <p *ngIf="product.description;else other_content">
-      Price: ${{ product.price }}<br />
-      Description: {{ product.description }}
+      {{ product.description }}<br /><br />
+      <span class="priceText">{{ product.price | currency }}</span>
     </p>
     <ng-template #other_content>
-      <p>Price: ${{ product.price }}</p>
+      <p class="priceText">{{ product.price | currency}}</p>
     </ng-template>
     <div><button (click)="share()">
       Share
     </button>
-      <app-product-alerts 
-      [product]="product"
-      (notify)="onNotify()">
+      <app-product-alerts [product]="product" (notify)="onNotify()">
       </app-product-alerts>
     </div>
   </h3>
